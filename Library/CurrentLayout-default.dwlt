@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: Hierarchy
   m_RootView: {fileID: 8}
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -43,8 +43,8 @@ MonoBehaviour:
     y: 0
     width: 320
     height: 538
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 56
+  controlID: 132
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -206,7 +206,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &9
 MonoBehaviour:
@@ -671,20 +671,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes/Courses/2 Suku Kata
+    - Assets/Sounds
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes/Courses/2 Suku Kata
+  - Assets/Sounds
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Unity\My project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: be3e0000
-    m_LastClickedID: 16062
-    m_ExpandedIDs: 00000000983e00009a3e00009c3e00009e3e0000b43e0000ce3e0000d03e000000ca9a3b
+    scrollPos: {x: 0, y: 68}
+    m_SelectedIDs: 16430000
+    m_LastClickedID: 17174
+    m_ExpandedIDs: 00000000dc420000de420000e0420000e242000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -712,7 +712,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000983e00009a3e00009c3e00009e3e0000
+    m_ExpandedIDs: 00000000dc420000de420000e0420000e2420000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -835,9 +835,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: f4b70000
-      m_LastClickedID: 47092
-      m_ExpandedIDs: e0b7ffffcab8ffffecb9ffffe0baffffe8bfffffb0c8ffff9cc9ffff2ecaffff0edcffff40dcffff72dcffffa6dcffff12e9ffff1ae9ffffa0e9ffff74edffff04eeffffb8f0ffff4cf1ffff5af1ffff1ef2ffff74f3ffff90f3ffff98f4ffffccf6ffffe2f9ffff0cfaffff4cfaffffaafaffffbefaffff62fbffff3c4b0000265900003e610000ca6d000016750000607b0000f28e0000da9c0000729d0000c0ab000000ac000094ac000034ad0000bcad0000a2b3000006b4000058b60000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 62fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1045,23 +1045,23 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-      y: 21
+      y: 0
       width: 1201
-      height: 496
-    m_Scale: {x: 0.6888889, y: 0.6888889}
-    m_Translation: {x: 600.5, y: 248}
+      height: 517
+    m_Scale: {x: 0.71805555, y: 0.71805555}
+    m_Translation: {x: 600.5, y: 258.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -871.69354
+      x: -836.28625
       y: -360
-      width: 1743.3871
+      width: 1672.5725
       height: 720
     m_MinimalGUI: 1
-  m_defaultScale: 0.6888889
+  m_defaultScale: 0.71805555
   m_LastWindowPixelSize: {x: 1201, y: 517}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1

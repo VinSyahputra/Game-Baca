@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Courses/2 Suku Kata/2-SukuKata.unity
+- path: Assets/Scenes/Courses/A-Z/Alphabet.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
