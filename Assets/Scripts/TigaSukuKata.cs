@@ -18,7 +18,7 @@ public class TigaSukuKata : MonoBehaviour
         
     }
 
-    void OnMouseUp(){
+    void OnMouseDown(){ //down
     	animator = GetComponent<Animator>();
     	animator.Play("3SukuKata");
     }

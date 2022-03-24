@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 public class SoundManagement : MonoBehaviour
 {
-	[SerializeField] Image btnSoundOn;
-	[SerializeField] Image btnSoundOff;
+	[SerializeField] Image BtnSoundOn;
+	[SerializeField] Image BtnSoundOff;
 	private bool muted = false;
     // Start is called before the first frame update
     void Start()
@@ -33,11 +33,11 @@ public class SoundManagement : MonoBehaviour
 
 	private void UpdateButtonIcon(){
 		if(muted == false){
-			btnSoundOn.enabled = true;
-			btnSoundOff.enabled = false;
+			BtnSoundOn.enabled = true;
+			BtnSoundOff.enabled = false;
 		}else{
-			btnSoundOn.enabled = false;
-			btnSoundOff.enabled = true;
+			BtnSoundOn.enabled = false;
+			BtnSoundOff.enabled = true;
 		}
 	}
 
