@@ -24,13 +24,13 @@ EditorBuildSettings:
     path: Assets/Scenes/Courses/Konsonan/Konsonan.unity
     guid: 50ede71ca5234de4b8e9da182315aef9
   - enabled: 1
-    path: Assets/Scenes/Courses/Awalan Kata/AwalanKata_new.unity
+    path: Assets/Scenes/Courses/2 Suku Kata/DuaSukuKata.unity
     guid: 1b6c97a13b4e73f438ee3ba8612cdccd
   - enabled: 1
     path: Assets/Scenes/Courses/Akhiran Kata/AkhiranKata.unity
     guid: 5afa40e35e4e33c4186475fc31438047
   - enabled: 1
-    path: Assets/Scenes/Courses/2 Suku Kata/2-SukuKata.unity
+    path: Assets/Scenes/Courses/Awalan Kata/AwalanKata.unity
     guid: 93c4e53d3d7b404408f4e418c6a801a6
   - enabled: 1
     path: Assets/Scenes/Courses/3 Suku Kata/3-SukuKata.unity

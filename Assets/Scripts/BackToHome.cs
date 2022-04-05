@@ -23,6 +23,6 @@ public class BackToHome : MonoBehaviour
 
     void OnMouseUp(){
         transform.localScale = new Vector2(x,y);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(2);
     }
 }
