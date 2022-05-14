@@ -10,7 +10,7 @@ public class ManagerKata : MonoBehaviour
 	[SerializeField] string[] listKataKata;
 
 	private int poinKata, poin;
-	string[] kataPertama = {"SEPATU", "RODA", "BAJU", "DAUN", "PINTU"};
+	string[] kataPertama = {"SEPATU", "RODA", "BAJU", "DAUN", "PINTU", "CICAK", "PISANG", "BAYAM", "TANGAN", "ZEBRA", "BELAJAR", "TELINGA", "BUNGA"};
     // Start is called before the first frame update
     void Start()
     {
