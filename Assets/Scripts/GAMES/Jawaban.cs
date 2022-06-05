@@ -8,7 +8,6 @@ public class Jawaban : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     public void jawaban(bool jawab){
