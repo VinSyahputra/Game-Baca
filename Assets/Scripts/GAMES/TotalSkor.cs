@@ -12,10 +12,10 @@ public class TotalSkor : MonoBehaviour
     {
         if(!PlayerPrefs.HasKey("totalSkor")){       	
             PlayerPrefs.SetInt("totalSkor", 0);
-            Debug.Log(PlayerPrefs.GetInt("totalSkor"));
+            // Debug.Log(PlayerPrefs.GetInt("totalSkor"));
         }else{
         	Load();
-            Debug.Log(PlayerPrefs.GetInt("totalSkor"));
+            // Debug.Log(PlayerPrefs.GetInt("totalSkor"));
         }
         GetComponent<Text>().text = PlayerPrefs.GetInt("totalSkor").ToString();
     }
@@ -23,7 +23,7 @@ public class TotalSkor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetComponent<Text>().text = PlayerPrefs.GetInt("totalSkor").ToString();
+        // GetComponent<Text>().text = PlayerPrefs.GetInt("totalSkor").ToString();
     }
 
     void Save(){

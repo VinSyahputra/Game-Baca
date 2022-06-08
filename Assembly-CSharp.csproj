@@ -75,6 +75,7 @@
      <Compile Include="Assets\Scripts\ChangeScene2.cs" />
      <Compile Include="Assets\Scripts\ClosePopup.cs" />
      <Compile Include="Assets\Scripts\Control.cs" />
+     <Compile Include="Assets\Scripts\GAMES\CountdownTimer.cs" />
      <Compile Include="Assets\Scripts\GAMES\Drag.cs" />
      <Compile Include="Assets\Scripts\GAMES\Jawaban.cs" />
      <Compile Include="Assets\Scripts\GAMES\ManagerKata.cs" />
