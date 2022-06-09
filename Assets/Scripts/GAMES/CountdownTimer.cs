@@ -7,7 +7,7 @@ public class CountdownTimer : MonoBehaviour
 {
     public Text textTimer;
 
-    public bool timerActive = true;
+    // public bool timerActive = true;
 
     void SetText(){
         int menit = Mathf.FloorToInt(PlayerPrefs.GetInt("timer") / 60);
@@ -21,21 +21,22 @@ public class CountdownTimer : MonoBehaviour
     void Start()
     {
         PlayerPrefs.SetInt("timer", 30);
+        PlayerPrefs.SetInt("timerActive", 1);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(timerActive){
+        if(PlayerPrefs.GetInt("timerActive") == 1){
             temp += Time.deltaTime;
             if(temp >= 1){
                 PlayerPrefs.SetInt("timer", PlayerPrefs.GetInt("timer")-1);
                 temp = 0;
             }
         }
-        if(timerActive && PlayerPrefs.GetInt("timer") <=0){
+        if(PlayerPrefs.GetInt("timerActive") == 1 && PlayerPrefs.GetInt("timer") <=0){
             Debug.Log("game over");
-            timerActive = false;
+            PlayerPrefs.SetInt("timerActive", 0);
         }
         SetText();
     }
