@@ -78,6 +78,7 @@
      <Compile Include="Assets\Scripts\GAMES\CountdownTimer.cs" />
      <Compile Include="Assets\Scripts\GAMES\Drag.cs" />
      <Compile Include="Assets\Scripts\GAMES\Jawaban.cs" />
+     <Compile Include="Assets\Scripts\GAMES\LifebarManager.cs" />
      <Compile Include="Assets\Scripts\GAMES\ManagerKata.cs" />
      <Compile Include="Assets\Scripts\GAMES\Restart.cs" />
      <Compile Include="Assets\Scripts\GAMES\Skor.cs" />

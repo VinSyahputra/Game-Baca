@@ -32,25 +32,39 @@ public class Jawaban : MonoBehaviour
     		PlayerPrefs.SetInt("skor", skor);
 			
     	}else{
+			// jika jawaban salah
     		feed_salah.SetActive(false);
     		feed_salah.SetActive(true);
+			PlayerPrefs.SetInt("hp", PlayerPrefs.GetInt("hp") - 1);
+			if(PlayerPrefs.GetInt("hp") == 0){
+				transform.parent.GetChild(transform.parent.childCount - 1 ).gameObject.SetActive(true);
+			}
     	}
 		// Debug.Log(PlayerPrefs.GetInt("timer"));
-		PlayerPrefs.SetInt("timer", 30);
+		PlayerPrefs.SetInt("timer", 3);
     	gameObject.SetActive(false);
     	transform.parent.GetChild(gameObject.transform.GetSiblingIndex() + 1).gameObject.SetActive(true);
     }
     // Update is called once per frame
     void Update()
     {
+		// jika waktu habis
         if(PlayerPrefs.GetInt("timerActive") == 0){
+			
 			feed_salah.SetActive(false);
     		feed_salah.SetActive(true);
 			
     		gameObject.SetActive(false);
-    		transform.parent.GetChild(gameObject.transform.GetSiblingIndex() + 1).gameObject.SetActive(true);
-			PlayerPrefs.SetInt("timer", 30);
+			// Debug.Log(transform.parent.childCount - 1);
+			PlayerPrefs.SetInt("hp", PlayerPrefs.GetInt("hp") - 1);
+			if(PlayerPrefs.GetInt("hp") == 0){
+				transform.parent.GetChild(transform.parent.childCount - 1 ).gameObject.SetActive(true);
+			}else{
+			transform.parent.GetChild(gameObject.transform.GetSiblingIndex() + 1).gameObject.SetActive(true);
+			PlayerPrefs.SetInt("timer", 3);
 			PlayerPrefs.SetInt("timerActive",1);
+			}
+			
 		}
     }
 }

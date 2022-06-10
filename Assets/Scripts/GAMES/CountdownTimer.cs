@@ -20,7 +20,7 @@ public class CountdownTimer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerPrefs.SetInt("timer", 30);
+        PlayerPrefs.SetInt("timer", 3);
         PlayerPrefs.SetInt("timerActive", 1);
     }
 
