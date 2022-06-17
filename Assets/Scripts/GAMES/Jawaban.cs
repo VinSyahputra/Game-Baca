@@ -41,7 +41,7 @@ public class Jawaban : MonoBehaviour
 			}
     	}
 		// Debug.Log(PlayerPrefs.GetInt("timer"));
-		PlayerPrefs.SetInt("timer", 3);
+		PlayerPrefs.SetInt("timer", 30);
     	gameObject.SetActive(false);
     	transform.parent.GetChild(gameObject.transform.GetSiblingIndex() + 1).gameObject.SetActive(true);
     }
@@ -61,7 +61,7 @@ public class Jawaban : MonoBehaviour
 				transform.parent.GetChild(transform.parent.childCount - 1 ).gameObject.SetActive(true);
 			}else{
 			transform.parent.GetChild(gameObject.transform.GetSiblingIndex() + 1).gameObject.SetActive(true);
-			PlayerPrefs.SetInt("timer", 3);
+			PlayerPrefs.SetInt("timer", 30);
 			PlayerPrefs.SetInt("timerActive",1);
 			}
 			
