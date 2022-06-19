@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class QuizManager : MonoBehaviour
 {
     public static QuizManager instance; //Instance to make is available in other scripts without reference
-
+    public GameObject feed_benar, feed_salah;
     [SerializeField] private GameObject gameComplete;
     //Scriptable data which store our questions data
     [SerializeField] private QuizDataScriptable questionDataScriptable;
@@ -24,19 +24,20 @@ public class QuizManager : MonoBehaviour
     private int currentAnswerIndex = 0, currentQuestionIndex = 0;   //index to keep track of current answer and current question
     private bool correctAnswer = true;                      //bool to decide if answer is correct or not
     private string answerWord;     
-
-    private int[] rand = {0, 1, 2, 3, 4, 5};
+    private int[] rand = new int[3];
     
 
     //string to store answer of current question
     private void Awake()
     {
+        Debug.Log(questionDataScriptable.questions.Count);
+        for(int i = 0; i<questionDataScriptable.questions.Count; i++){
+            rand[i] = i;
+        }
+
         System.Random random = new System.Random();
         rand = rand.OrderBy(x => random.Next()).ToArray();
-        foreach (var i in rand)
-        {
-            Debug.Log(i);
-        }
+        
         if (instance == null)
             instance = this;
         else
@@ -123,7 +124,7 @@ public class QuizManager : MonoBehaviour
         selectedWordsIndex.Add(value.transform.GetSiblingIndex()); //add the child index to selectedWordsIndex list
         value.gameObject.SetActive(false); //deactivate options object
         answerWordList[currentAnswerIndex].SetWord(value.wordValue); //set the answer word list
-
+        GetComponent<AudioSource>().Play();
         currentAnswerIndex++;   //increase currentAnswerIndex
 
         //if currentAnswerIndex is equal to answerWord length
@@ -145,6 +146,8 @@ public class QuizManager : MonoBehaviour
             if (correctAnswer)
             {
                 Debug.Log("Correct Answer");
+                feed_benar.SetActive(false);
+    		    feed_benar.SetActive(true);
                 gameStatus = GameStatus.Next; //set the game status
                 currentQuestionIndex++; //increase currentQuestionIndex
 
@@ -159,6 +162,8 @@ public class QuizManager : MonoBehaviour
                     gameComplete.SetActive(true);
                 }
             }else{
+                feed_salah.SetActive(false);
+    		    feed_salah.SetActive(true);
                 ResetQuestion();
             }
         }
