@@ -26,7 +26,7 @@ public class TotalSkor : MonoBehaviour
         // GetComponent<Text>().text = PlayerPrefs.GetInt("totalSkor").ToString();
     }
 
-    void Save(){
+    public void Save(){
         jumlah = PlayerPrefs.GetInt("totalSkor") + PlayerPrefs.GetInt("skor");
         PlayerPrefs.SetInt("totalSkor", jumlah);
     }

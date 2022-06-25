@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game/Tebak_Kata.unity
     guid: fcbcbb3334895a94a90ae45091cf71fa
+  - enabled: 1
+    path: Assets/Scenes/Game/Tebak_Gambar.unity
+    guid: fcec5171c6c80bc49af1c1bc63efe8c6
   m_configObjects: {}

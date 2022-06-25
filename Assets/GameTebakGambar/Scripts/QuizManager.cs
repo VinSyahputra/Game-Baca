@@ -10,6 +10,7 @@ public class QuizManager : MonoBehaviour
     public static QuizManager instance; //Instance to make is available in other scripts without reference
     public GameObject feed_benar, feed_salah;
     [SerializeField] private GameObject gameComplete;
+    [SerializeField] private GameObject gameFailed;
     //Scriptable data which store our questions data
     [SerializeField] private QuizDataScriptable questionDataScriptable;
     [SerializeField] private Image questionImage;           //image element to show the image
@@ -24,8 +25,8 @@ public class QuizManager : MonoBehaviour
     private int currentAnswerIndex = 0, currentQuestionIndex = 0;   //index to keep track of current answer and current question
     private bool correctAnswer = true;                      //bool to decide if answer is correct or not
     private string answerWord;     
-    private int[] rand = new int[3];
-    
+    private int[] rand = new int[14];
+    private int skor;
 
     //string to store answer of current question
     private void Awake()
@@ -85,6 +86,7 @@ public class QuizManager : MonoBehaviour
             optionsWordList[k].SetWord(wordsArray[k]);
         }
 
+        Debug.Log(questionDataScriptable.questions[rand[currentQuestionIndex]].answer);
     }
 
     //Method called on Reset Button click and on new question
@@ -146,14 +148,29 @@ public class QuizManager : MonoBehaviour
             if (correctAnswer)
             {
                 Debug.Log("Correct Answer");
-                feed_benar.SetActive(false);
-    		    feed_benar.SetActive(true);
+                
+
+                if(PlayerPrefs.GetInt("timer") >=24){
+                    skor = PlayerPrefs.GetInt("skor") + 100;
+                }
+                else if(PlayerPrefs.GetInt("timer") >=14){
+                    skor = PlayerPrefs.GetInt("skor") + 50;
+                }
+                else if(PlayerPrefs.GetInt("timer") >=1){
+                    skor = PlayerPrefs.GetInt("skor") + 10;
+                }
+                
+                PlayerPrefs.SetInt("skor", skor);
+                PlayerPrefs.SetInt("timer", 30);
+
                 gameStatus = GameStatus.Next; //set the game status
                 currentQuestionIndex++; //increase currentQuestionIndex
 
                 //if currentQuestionIndex is less that total available questions
                 if (currentQuestionIndex < questionDataScriptable.questions.Count)
                 {
+                    feed_benar.SetActive(false);
+    		        feed_benar.SetActive(true);
                     Invoke("SetQuestion", 0.5f); //go to next question
                 }
                 else
@@ -162,9 +179,19 @@ public class QuizManager : MonoBehaviour
                     gameComplete.SetActive(true);
                 }
             }else{
+                
+                PlayerPrefs.SetInt("hp", PlayerPrefs.GetInt("hp") - 1);
+
+                PlayerPrefs.SetInt("timer", 30);
+                
+                
+                if(PlayerPrefs.GetInt("hp") == 0){
+                    gameFailed.SetActive(true);
+                }else{
                 feed_salah.SetActive(false);
     		    feed_salah.SetActive(true);
                 ResetQuestion();
+                }
             }
         }
     }

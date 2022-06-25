@@ -30,20 +30,35 @@ public class Jawaban : MonoBehaviour
 			}
     		
     		PlayerPrefs.SetInt("skor", skor);
+			PlayerPrefs.SetInt("timer", 30);
+    		gameObject.SetActive(false);
+    		transform.parent.GetChild(gameObject.transform.GetSiblingIndex() + 1).gameObject.SetActive(true);
 			
     	}else{
 			// jika jawaban salah
+			// Debug.Log(transform.parent.GetChild(gameObject.transform.GetSiblingIndex()));
+
     		feed_salah.SetActive(false);
     		feed_salah.SetActive(true);
 			PlayerPrefs.SetInt("hp", PlayerPrefs.GetInt("hp") - 1);
+
+			PlayerPrefs.SetInt("timer", 30);
+    		
+			
 			if(PlayerPrefs.GetInt("hp") == 0){
+				gameObject.SetActive(false);
+				transform.parent.GetChild(gameObject.transform.GetSiblingIndex() + 1).gameObject.SetActive(false);
 				transform.parent.GetChild(transform.parent.childCount - 1 ).gameObject.SetActive(true);
+			}else{
+				gameObject.SetActive(false);
+    			transform.parent.GetChild(gameObject.transform.GetSiblingIndex() + 1).gameObject.SetActive(true);
 			}
+			
     	}
 		// Debug.Log(PlayerPrefs.GetInt("timer"));
-		PlayerPrefs.SetInt("timer", 30);
-    	gameObject.SetActive(false);
-    	transform.parent.GetChild(gameObject.transform.GetSiblingIndex() + 1).gameObject.SetActive(true);
+		// PlayerPrefs.SetInt("timer", 30);
+    	// gameObject.SetActive(false);
+    	// transform.parent.GetChild(gameObject.transform.GetSiblingIndex() + 1).gameObject.SetActive(true);
     }
     // Update is called once per frame
     void Update()
@@ -57,14 +72,15 @@ public class Jawaban : MonoBehaviour
     		gameObject.SetActive(false);
 			// Debug.Log(transform.parent.childCount - 1);
 			PlayerPrefs.SetInt("hp", PlayerPrefs.GetInt("hp") - 1);
+
 			if(PlayerPrefs.GetInt("hp") == 0){
+				
 				transform.parent.GetChild(transform.parent.childCount - 1 ).gameObject.SetActive(true);
 			}else{
-			transform.parent.GetChild(gameObject.transform.GetSiblingIndex() + 1).gameObject.SetActive(true);
-			PlayerPrefs.SetInt("timer", 30);
-			PlayerPrefs.SetInt("timerActive",1);
+				transform.parent.GetChild(gameObject.transform.GetSiblingIndex() + 1).gameObject.SetActive(true);
+				PlayerPrefs.SetInt("timer", 30);
+				PlayerPrefs.SetInt("timerActive",1);
 			}
-			
 		}
     }
 }

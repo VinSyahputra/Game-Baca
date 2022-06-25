@@ -10,12 +10,6 @@
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "00084e360506",
-            "name": "com.miui.home",
-            "processId": 29326,
-            "exited": true
-        },
-        {
-            "deviceId": "00084e360506",
             "name": "com.android.settings",
             "processId": 18890,
             "exited": true
@@ -42,6 +36,12 @@
             "deviceId": "00084e360506",
             "name": "com.android.settings",
             "processId": 20600,
+            "exited": true
+        },
+        {
+            "deviceId": "00084e360506",
+            "name": "com.android.settings",
+            "processId": 3163,
             "exited": false
         }
     ],
