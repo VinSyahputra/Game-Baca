@@ -19,7 +19,7 @@ public class QuizManager : MonoBehaviour
 
 
     private GameStatus gameStatus = GameStatus.Playing;     //to keep track of game status
-    private char[] wordsArray = new char[12];               //array which store char of each options
+    private char[] wordsArray = new char[9];               //array which store char of each options
 
     private List<int> selectedWordsIndex;                   //list which keep track of option word index w.r.t answer word index
     private int currentAnswerIndex = 0, currentQuestionIndex = 0;   //index to keep track of current answer and current question
@@ -194,6 +194,28 @@ public class QuizManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    void Update()
+    {
+		// jika waktu habis
+        if(PlayerPrefs.GetInt("timerActive") == 0){
+			
+			
+			
+			// Debug.Log(transform.parent.childCount - 1);
+			PlayerPrefs.SetInt("hp", PlayerPrefs.GetInt("hp") - 1);
+
+			if(PlayerPrefs.GetInt("hp") == 0){
+				gameFailed.SetActive(true);
+			}else{
+                feed_salah.SetActive(false);
+    		    feed_salah.SetActive(true);
+                ResetQuestion();
+				PlayerPrefs.SetInt("timer", 30);
+				PlayerPrefs.SetInt("timerActive",1);
+			}
+		}
     }
 
 

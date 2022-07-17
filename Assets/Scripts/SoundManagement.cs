@@ -10,6 +10,9 @@ public class SoundManagement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+		// pengaturan untuk game pasang kata
+		PlayerPrefs.SetInt("number", 0);
+
         if(!PlayerPrefs.HasKey("muted")){
         	PlayerPrefs.SetInt("muted", 0);
         }else{

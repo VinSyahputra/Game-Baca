@@ -11,24 +11,6 @@
         {
             "deviceId": "00084e360506",
             "name": "com.android.settings",
-            "processId": 18890,
-            "exited": true
-        },
-        {
-            "deviceId": "00084e360506",
-            "name": "com.android.settings",
-            "processId": 20366,
-            "exited": true
-        },
-        {
-            "deviceId": "00084e360506",
-            "name": "com.android.settings",
-            "processId": 16955,
-            "exited": true
-        },
-        {
-            "deviceId": "00084e360506",
-            "name": "com.android.settings",
             "processId": 6728,
             "exited": true
         },
@@ -42,6 +24,24 @@
             "deviceId": "00084e360506",
             "name": "com.android.settings",
             "processId": 3163,
+            "exited": true
+        },
+        {
+            "deviceId": "00084e360506",
+            "name": "com.android.settings",
+            "processId": 15120,
+            "exited": true
+        },
+        {
+            "deviceId": "00084e360506",
+            "name": "com.android.settings",
+            "processId": 7588,
+            "exited": true
+        },
+        {
+            "deviceId": "00084e360506",
+            "name": "com.android.settings",
+            "processId": 9526,
             "exited": false
         }
     ],

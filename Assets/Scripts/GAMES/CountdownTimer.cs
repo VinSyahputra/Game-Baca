@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class CountdownTimer : MonoBehaviour
 {
     public Text textTimer;
+    public int time;
 
     // public bool timerActive = true;
 
@@ -20,7 +21,7 @@ public class CountdownTimer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerPrefs.SetInt("timer", 30);
+        PlayerPrefs.SetInt("timer", time);
         PlayerPrefs.SetInt("timerActive", 1);
     }
 

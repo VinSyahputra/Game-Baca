@@ -5,6 +5,6 @@ using UnityEngine;
 public class characterAnimate : MonoBehaviour
 {
     public void Awake(){
-    	transform.LeanMoveLocal(new Vector2(-450,-170), 1).setEaseOutQuart().setLoopPingPong();
+    	transform.LeanMoveLocal(new Vector2(-760,-340), 1).setEaseOutQuart().setLoopPingPong();
     }
 }

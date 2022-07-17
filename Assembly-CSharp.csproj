@@ -85,6 +85,9 @@
      <Compile Include="Assets\Scripts\GAMES\LifebarManager.cs" />
      <Compile Include="Assets\Scripts\GAMES\ManagerKata.cs" />
      <Compile Include="Assets\Scripts\GAMES\Restart.cs" />
+     <Compile Include="Assets\Scripts\GAMES\SambungKata\MatchItem.cs" />
+     <Compile Include="Assets\Scripts\GAMES\SambungKata\MatchLogic.cs" />
+     <Compile Include="Assets\Scripts\GAMES\SambungKata\WIre.cs" />
      <Compile Include="Assets\Scripts\GAMES\Skor.cs" />
      <Compile Include="Assets\Scripts\GAMES\TotalSkor.cs" />
      <Compile Include="Assets\Scripts\Konsonan.cs" />
