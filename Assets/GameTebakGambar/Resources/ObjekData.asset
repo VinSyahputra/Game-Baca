@@ -41,3 +41,15 @@ MonoBehaviour:
     answer: sepatu
   - questionImage: {fileID: 21300000, guid: dc51ff16f63a7af46a3530f82bde16a8, type: 3}
     answer: topi
+  - questionImage: {fileID: 21300000, guid: f0b5a00e36620b44ea765d2dab39af0f, type: 3}
+    answer: mulut
+  - questionImage: {fileID: 21300000, guid: 514082d6ff290054faaef21ce2a912ce, type: 3}
+    answer: pensil
+  - questionImage: {fileID: 21300000, guid: 0c2d209825741d848ab88adbc2e360bb, type: 3}
+    answer: hidung
+  - questionImage: {fileID: 21300000, guid: 241b0b1e4ef6f114b83491f5c23139de, type: 3}
+    answer: jeruk
+  - questionImage: {fileID: 21300000, guid: 90976cbd0454f6e4aa52271b2467ba11, type: 3}
+    answer: lampu
+  - questionImage: {fileID: 21300000, guid: 060b2e8eae1f46041ad20f036f487d85, type: 3}
+    answer: mata

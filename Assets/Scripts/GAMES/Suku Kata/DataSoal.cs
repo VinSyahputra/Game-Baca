@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DataSoal : MonoBehaviour
 {
-    public GameObject hasil_bermain;
+    public GameObject hasil_bermain, hasil_bermain_gagal;
     int urutan = 0;
     // Start is called before the first frame update
     void Start()
@@ -33,6 +33,11 @@ public class DataSoal : MonoBehaviour
             transform.GetChild(urutan-1).gameObject.SetActive(false);
             hasil_bermain.SetActive(true);
         }
+    }
+
+    public void gameover(){
+        transform.GetChild(urutan-1).gameObject.SetActive(false);
+        hasil_bermain_gagal.SetActive(true);
     }
 
     // Update is called once per frame

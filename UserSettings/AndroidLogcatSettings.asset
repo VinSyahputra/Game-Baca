@@ -11,24 +11,6 @@
         {
             "deviceId": "00084e360506",
             "name": "com.android.settings",
-            "processId": 6728,
-            "exited": true
-        },
-        {
-            "deviceId": "00084e360506",
-            "name": "com.android.settings",
-            "processId": 20600,
-            "exited": true
-        },
-        {
-            "deviceId": "00084e360506",
-            "name": "com.android.settings",
-            "processId": 3163,
-            "exited": true
-        },
-        {
-            "deviceId": "00084e360506",
-            "name": "com.android.settings",
             "processId": 15120,
             "exited": true
         },
@@ -42,6 +24,24 @@
             "deviceId": "00084e360506",
             "name": "com.android.settings",
             "processId": 9526,
+            "exited": true
+        },
+        {
+            "deviceId": "00084e360506",
+            "name": "com.android.settings",
+            "processId": 21388,
+            "exited": true
+        },
+        {
+            "deviceId": "00084e360506",
+            "name": "com.android.settings",
+            "processId": 26453,
+            "exited": true
+        },
+        {
+            "deviceId": "00084e360506",
+            "name": "com.miui.home",
+            "processId": 15989,
             "exited": false
         }
     ],

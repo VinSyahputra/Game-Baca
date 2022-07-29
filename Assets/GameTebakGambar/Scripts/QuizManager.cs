@@ -25,7 +25,7 @@ public class QuizManager : MonoBehaviour
     private int currentAnswerIndex = 0, currentQuestionIndex = 0;   //index to keep track of current answer and current question
     private bool correctAnswer = true;                      //bool to decide if answer is correct or not
     private string answerWord;     
-    private int[] rand = new int[14];
+    private int[] rand = new int[20];
     private int skor;
 
     //string to store answer of current question

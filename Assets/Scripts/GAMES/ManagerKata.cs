@@ -12,7 +12,8 @@ public class ManagerKata : MonoBehaviour
 	[SerializeField] Transform slotAwal, slotAkhir;
 	[SerializeField] string[] listKataKata;
 	private int poinKata, poin;
-	string[] kataPertama = {"ANDI MEMAKAI BAJU HITAM", "ANTON BERADA DI DALAM KELAS", "ANTON SEDANG BELAJAR BERHITUNG", "ANTON SEDANG NONTON TV", "AYAH DAN IBU BERANGKAT KE KANTOR", "AYAH MENGANTAR ADIK KE SEKOLAH", "AYAH PERGI BEKERJA", "AYAH PULANG DARI KANTOR", "AYAH SEDANG MEMBACA KORAN", "AYU DAN SINTA BELAJAR BERSAMA", "BUDI DAN SINTA PERGI KE SEKOLAH", "BUDI MENGERJAKAN TUGAS SEKOLAH", "BUDI SEDANG BERMAIN", "BUDI SEDANG MANDI", "BUDI SEDANG TIDUR SIANG", "BUKU SINTA BERWARNA MERAH", "FIKRI BERMAIN SEPAK BOLA", "HAVINDI SEDANG MENCUCI BAJU", "IBU MEMBERSIHKAN HALAMAN RUMAH", "IBU SEDANG MEMASAK", "RIRI PERGI KE WARUNG", "RIRI PULANG SEKOLAH", "SINTA SEDANG MENYANYI", "AYU MEMBERSIHKAN KAMAR TIDUR"};
+	private int skor;
+	string[] kataPertama = {"ANDI MEMAKAI BAJU HITAM", "ANTON BERADA DI DALAM KELAS", "ANTON SEDANG BELAJAR BERHITUNG", "ANTON SEDANG NONTON TV", "AYAH DAN IBU BERANGKAT KE KANTOR", "AYAH MENGANTAR ADIK KE SEKOLAH", "AYAH PERGI BEKERJA", "AYAH PULANG DARI KANTOR", "AYAH SEDANG MEMBACA KORAN", "AYU DAN SINTA BELAJAR BERSAMA", "BUDI DAN SINTA PERGI KE SEKOLAH", "BUDI MENGERJAKAN TUGAS SEKOLAH", "BUDI SEDANG BERMAIN", "BUDI SEDANG MANDI", "BUDI SEDANG TIDUR SIANG", "BUKU SINTA BERWARNA MERAH", "FIKRI BERMAIN SEPAK BOLA", "HAVINDI SEDANG MENCUCI BAJU", "IBU MEMBERSIHKAN HALAMAN RUMAH", "IBU SEDANG MEMASAK", "RIRI PERGI KE WARUNG", "RIRI PULANG DARI SEKOLAH", "SINTA SEDANG MENYANYI", "AYU MEMBERSIHKAN KAMAR TIDUR"};
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,7 @@ public class ManagerKata : MonoBehaviour
 
         InitKata(kataPertama[PlayerPrefs.GetInt("number")]);
         // InitKata(kataPertama[UnityEngine.Random.Range(0, kataPertama.Length)]);
+
     }
 
     void InitKata(string kata){
@@ -76,11 +78,13 @@ public class ManagerKata : MonoBehaviour
 			PlayerPrefs.SetInt("number", PlayerPrefs.GetInt("number") + 1);
 			
 			if(PlayerPrefs.GetInt("number") != kataPertama.Length){
+				PlayerPrefs.SetInt("getSkor", PlayerPrefs.GetInt("getSkor") + 100);
 				SceneManager.LoadScene(11);
 			}else{
-				PlayerPrefs.SetInt("totalSkor", PlayerPrefs.GetInt("totalSkor") + 1000);
+				PlayerPrefs.SetInt("totalSkor", PlayerPrefs.GetInt("totalSkor") + PlayerPrefs.GetInt("getSkor"));
 				gameSelesai.SetActive(true);
 				PlayerPrefs.DeleteKey("number");
+				PlayerPrefs.DeleteKey("getSkor");
 				// SceneManager.LoadScene(10);
 				return;
 			}
@@ -91,6 +95,7 @@ public class ManagerKata : MonoBehaviour
 		if(PlayerPrefs.GetInt("timerActive") == 0){
 			gameGagal.SetActive(true);
 			PlayerPrefs.DeleteKey("number");
+			PlayerPrefs.DeleteKey("getSkor");
 		}
 	}
 }

@@ -12,31 +12,31 @@ public class Jawaban : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-		if(!PlayerPrefs.HasKey("number")){
-			PlayerPrefs.SetInt("number", 0);
-		}else{
-			PlayerPrefs.SetInt("number", 0);
-		}
-        for (int i = 4; i < transform.parent.childCount - 2 ; i++)
-        {
-            rand[i-4] = i;
-        }
-        System.Random random = new System.Random();
-        rand = rand.OrderBy(x => random.Next()).ToArray();
-		Debug.Log("jumlah :" + rand.Length);
-		for (int i = 0; i < rand.Length; i++)
-		{
-			Debug.Log(rand[i]);
-			transform.parent.GetChild(rand[i]).gameObject.SetActive(false);
-		}
-        transform.parent.GetChild(rand[PlayerPrefs.GetInt("number")]).gameObject.SetActive(true);
+		// if(!PlayerPrefs.HasKey("number")){
+		// 	PlayerPrefs.SetInt("number", 0);
+		// }else{
+		// 	PlayerPrefs.SetInt("number", 0);
+		// }
+        // for (int i = 4; i < transform.parent.childCount - 2 ; i++)
+        // {
+        //     rand[i-4] = i;
+        // }
+        // System.Random random = new System.Random();
+        // rand = rand.OrderBy(x => random.Next()).ToArray();
+		// Debug.Log("jumlah :" + rand.Length);
+		// for (int i = 0; i < rand.Length; i++)
+		// {
+		// 	Debug.Log(rand[i]);
+		// 	transform.parent.GetChild(rand[i]).gameObject.SetActive(false);
+		// }
+        // transform.parent.GetChild(rand[PlayerPrefs.GetInt("number")]).gameObject.SetActive(true);
     }
 
     public void jawaban(bool jawab){
 		
     	if(jawab){
 			// index= index + 1;
-			PlayerPrefs.SetInt("number", PlayerPrefs.GetInt("number")+1);
+			// PlayerPrefs.SetInt("number", PlayerPrefs.GetInt("number")+1);
     		feed_benar.SetActive (false);
     		feed_benar.SetActive(true);
 			
@@ -56,13 +56,13 @@ public class Jawaban : MonoBehaviour
     		gameObject.SetActive(false);
 			
 
-			if(PlayerPrefs.GetInt("number") == 20){
-				transform.parent.GetChild(transform.parent.childCount - 2 ).gameObject.SetActive(true);
-			}else{
+			// if(PlayerPrefs.GetInt("number") == 20){
+			// 	transform.parent.GetChild(transform.parent.childCount - 2 ).gameObject.SetActive(true);
+			// }else{
 
-			transform.parent.GetChild(rand[PlayerPrefs.GetInt("number")]).gameObject.SetActive(true);
-			}
-    		// transform.parent.GetChild(gameObject.transform.GetSiblingIndex() + 1).gameObject.SetActive(true);
+			// transform.parent.GetChild(rand[PlayerPrefs.GetInt("number")]).gameObject.SetActive(true);
+			// }
+    		transform.parent.GetChild(gameObject.transform.GetSiblingIndex() + 1).gameObject.SetActive(true);
 			
     	}else{
 			// jika jawaban salah
@@ -78,14 +78,14 @@ public class Jawaban : MonoBehaviour
 			if(PlayerPrefs.GetInt("hp") == 0){
 				PlayerPrefs.SetInt("number", PlayerPrefs.GetInt("number")+1);
 				gameObject.SetActive(false);
-				transform.parent.GetChild(rand[PlayerPrefs.GetInt("number")]).gameObject.SetActive(false);
-				// transform.parent.GetChild(gameObject.transform.GetSiblingIndex() + 1).gameObject.SetActive(false);
+				// transform.parent.GetChild(rand[PlayerPrefs.GetInt("number")]).gameObject.SetActive(false);
+				transform.parent.GetChild(gameObject.transform.GetSiblingIndex() + 1).gameObject.SetActive(false);
 				transform.parent.GetChild(transform.parent.childCount - 1 ).gameObject.SetActive(true);
 			}else{
-				PlayerPrefs.SetInt("number", PlayerPrefs.GetInt("number")+1);
+				// PlayerPrefs.SetInt("number", PlayerPrefs.GetInt("number")+1);
 				gameObject.SetActive(false);
-				transform.parent.GetChild(rand[PlayerPrefs.GetInt("number")]).gameObject.SetActive(true);
-    			// transform.parent.GetChild(gameObject.transform.GetSiblingIndex() + 1).gameObject.SetActive(true);
+				// transform.parent.GetChild(rand[PlayerPrefs.GetInt("number")]).gameObject.SetActive(true);
+    			transform.parent.GetChild(gameObject.transform.GetSiblingIndex() + 1).gameObject.SetActive(true);
 			}
 			
     	}
