@@ -1,9 +1,9 @@
 {
     "m_SelectedDeviceId": "00084e360506",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "00084e360506",
+        "name": "com.DefaultCompany.com.unity.template.mobile2D",
+        "processId": 19946,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -42,6 +42,18 @@
             "deviceId": "00084e360506",
             "name": "com.miui.home",
             "processId": 15989,
+            "exited": false
+        },
+        {
+            "deviceId": "00084e360506",
+            "name": "com.android.settings",
+            "processId": 18834,
+            "exited": false
+        },
+        {
+            "deviceId": "00084e360506",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 19946,
             "exited": false
         }
     ],
