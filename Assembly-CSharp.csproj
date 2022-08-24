@@ -108,6 +108,7 @@
      <Compile Include="Assets\Scripts\alphabet_click_animate.cs" />
      <Compile Include="Assets\Scripts\characterAnimate.cs" />
      <Compile Include="Assets\Scripts\data_alphabet.cs" />
+     <Compile Include="Assets\Scripts\ngny_click_animate.cs" />
      <Compile Include="Assets\Scripts\popUpCheck.cs" />
      <Compile Include="Assets\Scripts\swiperScaling.cs" />
      <Compile Include="Assets\Scripts\test.cs" />

@@ -53,4 +53,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game/Tebak SukuKata.unity
     guid: 6575e1ea7d2394441bd1fb5fffdd7aff
+  - enabled: 1
+    path: Assets/Scenes/Courses/Ng Ny/Ng.unity
+    guid: 67b5a5c12d0a4d04c8625caeae24bb51
+  - enabled: 1
+    path: Assets/Scenes/Courses/Ng Ny/Ny.unity
+    guid: e21b40154647afa4d976f084ff72cf8d
   m_configObjects: {}
